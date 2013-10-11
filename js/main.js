@@ -1,11 +1,21 @@
 // JavaScript Document
 //AVF Project 1,2,3,4
 //Joshua Wisecup
-//Term 1310
+//Term 1310	
+
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() { 
+	$("#photo").on("click", instagramFn); 
+	$("#bake").on("click", yelpFn); 
+	//etc...
+}; // phonegap deviceready 
+
 
 // Instagram
 
-$( document ).on( "pageinit", ".photo", function() {
+var instagramFn = function() {
 	$.mobile.changePage("#photo", {});
 	$('#photoList').empty();
 	var tag = "bakery";
@@ -13,7 +23,7 @@ $( document ).on( "pageinit", ".photo", function() {
 				'/media/recent?callback=?&amp;client_id=453262ad83504533be1195b63bc34d76';	
 	$.getJSON(url, results);	
 	
-});
+};
 
 
 // put photos in a list
@@ -29,7 +39,7 @@ $( document ).on( "pageinit", ".photo", function() {
 	$(".photoGrid").trigger("create");
 
 
-$( document ).on( "pageinit", ".bake", function() {
+var yelpFn = function() {
 	$.mobile.changePage("#bake", {});
 	$('#bakeryList').empty();
 
@@ -107,5 +117,5 @@ $.ajax({
 });
 
 
-});
+};
 
