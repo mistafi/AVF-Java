@@ -6,7 +6,7 @@ Term 1310
 
 .ui-header .ui-title {
 	font-size: 20px;
-	margin: .2em 30% .2em;
+	margin: .2em 30% .2em;	
 	text-decoration: none;
 }
 
@@ -58,9 +58,19 @@ header h1 a, header h1 a:hover {
 #photoList {
 	list-style-type:none;
 	display: inline-block;
+	-webkit-padding-start: 15px;
 }
+
 #photoList li {
 	float:left;
+	margin: 0 20px 20px 0;
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+	background: white;
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .addItem {
@@ -374,7 +384,7 @@ margin:15px 15px 0 0;
 }
 
 /* Desktop */
-@media min-width: 1225px) { 
+@media (min-width: 1225px) { 
 
 .brandingRow {
 width: 600px;
@@ -398,7 +408,7 @@ margin: 0px 0px 5px 0px;
 }
 
 /* iPad Max */
-@media max-width: 1224px) { 
+@media (max-width: 1224px) { 
 
 
 }
@@ -424,15 +434,14 @@ width: 360px;
 
 .brandingImg {
 background-size: 100%;
-width: 96px;
-height: 96px;
+width: 80px;
+height: 80px;
 float: left;
 }
 
 header h1 {
-font-size: 27px!important;
+font-size: 22px!important;
 margin: 0px;
-width: 300px;
 }
 
 }
